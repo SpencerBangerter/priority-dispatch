@@ -8,6 +8,7 @@ function UserTable({ users }) {
   // State to control the modal
   const [userModalOpen, setUserModalOpen] = React.useState(false);
   const [modalProfile, setModalProfile] = React.useState({});
+  
   const handleOpen = (user) => {
     setModalProfile(user);
     setUserModalOpen(true);
