@@ -2,12 +2,20 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 // if we had the ability to call the API for a specific user via ID or something,
 //  we could use the params to make this page dynamic, however, this is not posssible with randomuser.me
 // so we are just going to use the page to display the contents from local storage
 const ProfilePage = ({ params }) => {
-  const profile = JSON.parse(localStorage.getItem("profile"));
+  const [profile, setProfile] = useState(null);
 
+  useEffect(() => {
+    const storedProfile = localStorage.getItem("profile");
+    if (storedProfile) {
+      setProfile(JSON.parse(storedProfile));
+    }
+  }, []);
+  
   if (!profile) {
     return (
       <div>

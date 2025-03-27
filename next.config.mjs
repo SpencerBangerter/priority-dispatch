@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  basePath: "/priority-dispatch",
+  // output: "export",
+  // basePath: "/priority-dispatch",
   images: {
     remotePatterns: [
       {

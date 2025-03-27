@@ -1,3 +1,4 @@
+"use-client";
 export async function GET() {
   // This API call fetches 30 random users from the Random User Generator API,
   // restricted to users from the US, using a fixed seed, which isn't necessary but is interesting
