@@ -2,7 +2,7 @@
 const nextConfig = {
   output: "export",
   basePath: "/priority-dispatch",
-
+  trailingSlash: true,
   images: {
     remotePatterns: [
       {
